@@ -5,7 +5,7 @@ def train_test_split(X, Y, test_size=0.2, random_seed=None):
     A function that randomly splits a dataset into train and test sets.
 
     Arguments:
-        X:              Features of the dataste (numpy array)
+        X:              Features of the dataset (numpy array)
         Y:              Labels of the dataset (numpy array)
         test_size:      The portion of the dataset to be included in the test set (float)
         random_seed:    The possibility to set random seed for reproducability (int)

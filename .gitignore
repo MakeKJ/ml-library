@@ -1,3 +1,9 @@
+# Ignore folders
+class_testing/
+
+
 # Ignore files
 *.lma
 *.ipynb
+*.txt
+*.pyc
