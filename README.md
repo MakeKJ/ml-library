@@ -2,6 +2,8 @@
 
 A personal machine learning library project aimed at deepening my understanding of the underlying principles behind various machine learning models. The library provides essential tools for building, training, and experimenting with different machine learning models.
 
+An example usage of the features of the library can be seen in example_mnist_numbers.ipynb file.
+
 ## Table of Contents
 
 - [Modules](#modules)
@@ -17,7 +19,7 @@ The library currently supports various machine learning models:
 
 - **Linear Regression**: An implementation of linear regression that uses gradient descent to update the parameters.
   - `linear_regression.py`
-  - - **Loogistic Regression**: An implementation of logistic regression that uses stochastic gradient descent to update the parameters.
+- **Logistic Regression**: An implementation of logistic regression that uses stochastic gradient descent to update the parameters.
   - `logistic_regression.py`
 
 #### Neural Networks (NN)
