@@ -43,7 +43,11 @@ class Sigmoid:
             y:     Output of the Sigmoid function (n_features,) (numpy array)
         """
         self.x = x
-        self.y = 1 / (1 + np.exp(-x))
+        # A treshold to avoid overflow in exp(x)
+        threshold = 700
+        x_clipped = np.clip(x, -threshold, threshold)
+        
+        self.y = 1 / (1 + np.exp(-x_clipped))
         return self.y
 
     def backward(self, dy):

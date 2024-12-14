@@ -2,13 +2,11 @@ import numpy as np
 
 class BaseModel:
     """
-    
+    Base class for all neural networks.
     """
     
     def __init__(self, **kwargs):
-        """
-        Initialize the model.
-        """
+        """Initialize the model."""
         self.params = kwargs
         self.layers = []
 
@@ -25,8 +23,6 @@ class BaseModel:
                 raise ValueError(f"Layer {i} does not have weights!")
             if f"layer_{i}_biases" in new_params:
                 layer.b = new_params[f"layer_{i}_biases"]
-            else:
-                raise ValueError(f"Layer {i} does not have biases!")
 
     def get_parameters(self):
         """Extract all trainable parameters from layers."""
@@ -35,8 +31,6 @@ class BaseModel:
             if hasattr(layer, 'w') and hasattr(layer, 'b'):
                 params[f"layer_{i}_weights"] = layer.w
                 params[f"layer_{i}_biases"] = layer.b
-            else:
-                raise ValueError(f"Layer {i} does not have parameters!")
         return params
     
     def get_gradients(self):
@@ -46,8 +40,6 @@ class BaseModel:
             if hasattr(layer, 'dw') and hasattr(layer, 'db'):
                 gradients[f"layer_{i}_weights"] = layer.dw
                 gradients[f"layer_{i}_biases"] = layer.db
-            else:
-                raise ValueError(f"Layer {i} does not have gradients!")
         return gradients
 
     def forward(self, x):

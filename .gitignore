@@ -7,3 +7,6 @@ class_testing/
 *.ipynb
 *.txt
 *.pyc
+
+# Include file
+!example_mnist_numbers.ipynb
