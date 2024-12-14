@@ -15,8 +15,10 @@ A personal machine learning library project aimed at deepening my understanding 
 
 The library currently supports various machine learning models:
 
-- **Linear Regression**: A simple implementation of linear regression that uses gradient descent to update the parameters.
+- **Linear Regression**: An implementation of linear regression that uses gradient descent to update the parameters.
   - `linear_regression.py`
+  - - **Loogistic Regression**: An implementation of logistic regression that uses stochastic gradient descent to update the parameters.
+  - `logistic_regression.py`
 
 #### Neural Networks (NN)
 
@@ -38,7 +40,7 @@ This submodule contains components to create and train neural networks.
 - **Loss Functions**: A collection of loss functions.
   - `loss_functions.py`
   - **Implemented Loss Functions**:
-    - [MSE_loss]
+    - [MSE_loss, BCE_loss]
 
 - **Optimizers**: Optimizers used to update model parameters during training.
   - `optimizers.py`
@@ -52,9 +54,9 @@ Utility functions for preprocessing and evaluation.
 - **Preprocessing**: Includes data preprocessing utilities.
   - `preprocessing.py`
   - **Implemented Features**:
-    - [train_test_split]
+    - [train_test_split, train_val_test_split]
 
 - **Metrics**: Includes utility functions for evaluation metrics.
   - `metrics.py`
   - **Implemented Features**:
-    - [accuracy, mean_squared_error]
+    - [mean_squared_error, accuracy, precision, recall, f1_score]
