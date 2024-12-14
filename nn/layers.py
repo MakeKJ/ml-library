@@ -13,15 +13,10 @@ class Linear:
             x_dim: input dimension (int)
             y_dim: output dimension (int)
         """
-        # Initialize the weights
-        # bound = 3 / np.sqrt(x_dim)
-        # self.w = np.random.uniform(-bound, bound, (y_dim, x_dim))
-        # bound = 1 / np.sqrt(x_dim)
-        # self.b = np.random.uniform(-bound, bound, y_dim)
-
-        bound = np.sqrt(1 / x_dim)
-        self.w = np.random.uniform(-bound, bound, (y_dim, x_dim))
-        self.b = np.zeros(y_dim)  # Biases initialized to zero
+        # He initialization
+        std = np.sqrt(2 / x_dim)
+        self.w = np.random.normal(0, std, (y_dim, x_dim))
+        self.b = np.zeros(y_dim)
 
         self.dw = None
         self.db = None
@@ -37,7 +32,19 @@ class Linear:
             y: output data (numpy array)
         """ 
         self.x = x
-        y = np.dot(x, self.w.T) + self.b
+        
+        # Handle case where x has more than 2 dimensions
+        if len(x.shape) > 2:
+            x_reshaped = x.reshape(-1, x.shape[-1])
+        else:
+            x_reshaped = x
+        
+        y = np.dot(x_reshaped, self.w.T) + self.b
+        
+        # Reshape back to the original batch shape if necessary
+        if len(x.shape) > 2:
+            y = y.reshape(x.shape[0], -1, self.w.shape[0])
+        
         return y
 
     def backward(self, dy):
