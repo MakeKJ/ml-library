@@ -42,7 +42,7 @@ This submodule contains components to create and train neural networks.
 
 - **Optimizers**: Optimizers used to update model parameters during training.
   - `optimizers.py`
-  - **Implemented Features**:
+  - **Implemented Optimizers**:
     - [GDOptimizer]
 
 #### Utilities
