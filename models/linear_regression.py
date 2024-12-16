@@ -9,7 +9,7 @@ class LinearRegression:
         self.w = None
         self.b = None
 
-    def train(self, X, Y, epochs=100, lr=0.01):
+    def train(self, X, Y, lr=0.01, epochs=100):
         """
         Trains the Linear Regression model using gradient descent.
 

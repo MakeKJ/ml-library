@@ -9,7 +9,7 @@ class LogisticRegression:
         """Initializes the Logistic Regression model."""
         self.w = None
 
-    def train(self, X, Y, max_iterations, lr, decay=False):
+    def train(self, X, Y, lr=0.01, epochs=100, decay=False):
         """
         Trains the logistic regression model using stochastic gradient descent.
 
@@ -31,8 +31,8 @@ class LogisticRegression:
             raise ValueError("Number of samples in X and Y must match.")
 
         indices = np.arange(n_samples)
-        for epoch in range(max_iterations):
-            # Shuffle the dataset
+        for epoch in range(epochs):
+            # Shuffle the data
             np.random.shuffle(indices)
             
             for i in indices:
