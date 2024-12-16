@@ -17,10 +17,15 @@ An example usage of the features of the library can be seen in example_mnist_num
 
 The library currently supports various machine learning models:
 
-- **Linear Regression**: An implementation of linear regression that uses gradient descent to update the parameters.
+- **Linear Regression**
+  - A Linear Regression model that uses gradient descent to update the parameters.
   - `linear_regression.py`
-- **Logistic Regression**: An implementation of logistic regression that uses stochastic gradient descent to update the parameters.
+- **Logistic Regression**
+  - A Logistic Regression model that uses stochastic gradient descent to update the parameters.
   - `logistic_regression.py`
+- **Primal Support Vector Machine**
+  - A Support Vector Machine model implemented in primal representation that uses stochastic gradient descent to update the parameters.
+  - `primal_svm.py`
 
 #### Neural Networks (NN)
 
