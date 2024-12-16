@@ -11,7 +11,11 @@ def accuracy(Y, Y_pred):
     Returns:
         accuracy:   Accuracy of the predictions (float)
     """
-    return np.sum(Y == Y_pred)/len(Y)
+    # Ensure int arrays
+    Y = np.array(Y, dtype=int)
+    Y_pred = np.array(Y_pred, dtype=int)
+
+    return np.mean(Y == Y_pred)
 
 
 def precision(Y, Y_pred):
@@ -25,6 +29,10 @@ def precision(Y, Y_pred):
     Returns:
         precision:  Precision of the predictions (float)
     """
+    # Ensure int arrays
+    Y = np.array(Y, dtype=int)
+    Y_pred = np.array(Y_pred, dtype=int)
+
     true_positives = np.sum((Y == 1) & (Y_pred == 1))
     false_positives = np.sum((Y == -1) & (Y_pred == 1))
     return true_positives / (true_positives + false_positives)
@@ -41,6 +49,10 @@ def recall(Y, Y_pred):
     Returns:
         recall:     Recall of the predictions (float)
     """
+    # Ensure int arrays
+    Y = np.array(Y, dtype=int)
+    Y_pred = np.array(Y_pred, dtype=int)
+
     true_positives = np.sum((Y == 1) & (Y_pred == 1))
     false_negatives = np.sum((Y == 1) & (Y_pred == -1))
     return true_positives / (true_positives + false_negatives)
@@ -57,6 +69,10 @@ def f1_score(Y, Y_pred):
     Returns:
         f1_score:   F1 score of the predictions (float)
     """
+    # Ensure int arrays
+    Y = np.array(Y, dtype=int)
+    Y_pred = np.array(Y_pred, dtype=int)
+
     true_positives = np.sum((Y == 1) & (Y_pred == 1))
     false_positives = np.sum((Y == -1) & (Y_pred == 1))
     false_negatives = np.sum((Y == 1) & (Y_pred == -1))
