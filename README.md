@@ -26,6 +26,10 @@ The library currently supports various machine learning models:
 - **Primal Support Vector Machine**
   - A Support Vector Machine model implemented in primal representation that uses stochastic gradient descent to update the parameters.
   - `primal_svm.py`
+- **Dual Support Vector Machine**
+  - A Support Vector Machine model implemented in dual representation that uses stochastic dual coordinate ascent to update the parameters.
+  - The model features linear, polynomial, radial basis function (RBF) and Gaussian kernels to allow flexibility in classification tasks.
+  - `dual_svm.py`
 
 #### Neural Networks (NN)
 
