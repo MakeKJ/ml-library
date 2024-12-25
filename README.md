@@ -74,3 +74,9 @@ Utility functions for preprocessing and evaluation.
   - **Implemented Features**:
     - [mean_squared_error, accuracy, precision, recall, f1_score]
   - `metrics.py`
+ 
+## Contact
+
+For questions and feedback, feel free to reach out:
+
+- Email: mk.junttila@gmail.com
