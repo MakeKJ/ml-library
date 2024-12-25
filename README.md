@@ -2,7 +2,7 @@
 
 A personal machine learning library project aimed at deepening my understanding of the underlying principles behind various machine learning models. The library provides essential tools for building, training, and experimenting with different machine learning models.
 
-An example usage of the features of the library can be seen in example_mnist_numbers.ipynb file.
+An example usage of the features of the library can be seen in example_mnist_cnn.ipynb file.
 
 ## Table of Contents
 
@@ -39,35 +39,38 @@ This submodule contains components to create and train neural networks.
   - `BaseModel.py`
 
 - **Activation Functions**: Common activation functions used in neural networks.
-  - `activations.py`
   - **Implemented Activation functions**:
     - [Tanh, Sigmoid, ReLu]
+  - `activations.py`
 
 - **Layers**: Different layers used in neural networks.
-  - `layers.py`
   - **Implemented Layers**:
-    - [Linear]
+    - Linear
+    - Convolutional 2D
+    - Max pooling 2D
+  - `layers.py`
 
 - **Loss Functions**: A collection of loss functions.
-  - `loss_functions.py`
+
   - **Implemented Loss Functions**:
     - [MSE_loss, BCE_loss]
+  - `loss_functions.py`
 
 - **Optimizers**: Optimizers used to update model parameters during training.
-  - `optimizers.py`
   - **Implemented Optimizers**:
     - [GDOptimizer]
+  - `optimizers.py`
 
 #### Utilities
 
 Utility functions for preprocessing and evaluation.
 
 - **Preprocessing**: Includes data preprocessing utilities.
-  - `preprocessing.py`
   - **Implemented Features**:
     - [train_test_split, train_val_test_split]
+  - `preprocessing.py`
 
 - **Metrics**: Includes utility functions for evaluation metrics.
-  - `metrics.py`
   - **Implemented Features**:
     - [mean_squared_error, accuracy, precision, recall, f1_score]
+  - `metrics.py`
