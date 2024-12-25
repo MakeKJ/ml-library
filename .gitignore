@@ -1,5 +1,6 @@
 # Ignore folders
 class_testing/
+saved_models/
 
 
 # Ignore files
@@ -7,6 +8,7 @@ class_testing/
 *.ipynb
 *.txt
 *.pyc
+*.pkl
 
 # Include file
-!example_mnist_numbers.ipynb
+!example_mnist_cnn.ipynb
