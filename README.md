@@ -1,4 +1,4 @@
-# Epic_ML_library
+# ml-library
 
 A personal machine learning library project aimed at deepening my understanding of the underlying principles behind various machine learning models. The library provides essential tools for building, training, and experimenting with different machine learning models.
 
