@@ -1,17 +1,47 @@
 # ml-library
 
-A personal machine learning library project aimed at deepening my understanding of the underlying principles behind various machine learning models. The library provides essential tools for building, training, and experimenting with different machine learning models.
+A personal machine learning library featuring implementations of core models from scratch, without relying on high-level ML libraries. Built to deepen my understanding of machine learning fundamentals and demonstrate practical, hands-on knowledge.
 
 An example usage of the features of the library can be seen in example_mnist_cnn.ipynb file.
 
 ## Table of Contents
 
 - [Modules](#modules)
-  - [Models](#models)
   - [Neural Networks (NN)](#neural-networks-nn)
+  - [Models](#models)
   - [Utilities](#utilities)
 
 ### Modules
+
+#### Neural Networks (NN)
+
+This submodule contains components to create and train neural networks.
+
+- **BaseModel**: A base class for neural network models with common methods.
+  - `BaseModel.py`
+
+- **Layers**: Different layers used in neural networks.
+  - **Implemented Layers**:
+    - Linear
+    - Convolutional 2D
+    - Max pooling 2D
+  - `layers.py`
+
+- **Activation Functions**: Common activation functions used in neural networks.
+  - **Implemented Activation functions**:
+    - [Tanh, Sigmoid, ReLu]
+  - `activations.py`
+
+- **Loss Functions**: A collection of loss functions.
+
+  - **Implemented Loss Functions**:
+    - [MSE_loss, BCE_loss]
+  - `loss_functions.py`
+
+- **Optimizers**: Optimizers used to update model parameters during training.
+  - **Implemented Optimizers**:
+    - [GDOptimizer]
+  - `optimizers.py`
 
 #### Models
 
@@ -30,36 +60,6 @@ The library currently supports various machine learning models:
   - A Support Vector Machine model implemented in dual representation that uses stochastic dual coordinate ascent to update the parameters.
   - The model features linear, polynomial, radial basis function (RBF) and Gaussian kernels to allow flexibility in classification tasks.
   - `dual_svm.py`
-
-#### Neural Networks (NN)
-
-This submodule contains components to create and train neural networks.
-
-- **BaseModel**: A base class for neural network models with common methods.
-  - `BaseModel.py`
-
-- **Activation Functions**: Common activation functions used in neural networks.
-  - **Implemented Activation functions**:
-    - [Tanh, Sigmoid, ReLu]
-  - `activations.py`
-
-- **Layers**: Different layers used in neural networks.
-  - **Implemented Layers**:
-    - Linear
-    - Convolutional 2D
-    - Max pooling 2D
-  - `layers.py`
-
-- **Loss Functions**: A collection of loss functions.
-
-  - **Implemented Loss Functions**:
-    - [MSE_loss, BCE_loss]
-  - `loss_functions.py`
-
-- **Optimizers**: Optimizers used to update model parameters during training.
-  - **Implemented Optimizers**:
-    - [GDOptimizer]
-  - `optimizers.py`
 
 #### Utilities
 
