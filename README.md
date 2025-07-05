@@ -25,6 +25,7 @@ This submodule contains components to create and train neural networks.
     - Linear
     - Convolutional 2D
     - Max pooling 2D
+    - Dropout
   - `layers.py`
 
 - **Activation Functions**: Common activation functions used in neural networks.
@@ -35,7 +36,7 @@ This submodule contains components to create and train neural networks.
 - **Loss Functions**: A collection of loss functions.
 
   - **Implemented Loss Functions**:
-    - [MSE_loss, BCE_loss]
+    - [MSE_loss, BCE_loss, Categorical cross entropy loss]
   - `loss_functions.py`
 
 - **Optimizers**: Optimizers used to update model parameters during training.
