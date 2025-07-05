@@ -11,4 +11,6 @@ saved_models/
 *.pkl
 
 # Include file
+!example_mnist_cnn_old.ipynb
 !example_mnist_cnn.ipynb
+!example_mnist_mlp.ipynb

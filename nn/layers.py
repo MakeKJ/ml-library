@@ -310,3 +310,33 @@ class MaxPool2D:
         # Reconstruct the gradient wrt input using
         dx = columns_to_2d_input(dx_columns, self.x.shape, pool_size, stride)
         return dx
+    
+
+class Dropout:
+    """Dropout layer for regularization. During evaluation/testing, this layer does nothing."""
+    def __init__(self, p=0.5):
+        """
+        Arguments:
+            p:  Probability of an element to be zeroed.
+        """
+        if not (0 <= p < 1):
+            raise ValueError("Dropout probability must be in the range [0, 1)")
+        self.p = p
+        self.is_training = False
+        self.mask = None
+
+    def forward(self, x):
+        """Applies dropout if in training mode."""
+        if not self.is_training:
+            return x
+
+        # Create a mask of 0s and 1s, scale the kept values by 1/(1-p).
+        self.mask = (np.random.rand(*x.shape) > self.p) / (1.0 - self.p)
+        
+        return x * self.mask
+
+    def backward(self, dy):
+        """Applies the same mask to the incoming gradient."""
+        assert self.mask is not None, "Backward called on Dropout layer in eval mode or without a forward pass."
+        
+        return dy * self.mask
