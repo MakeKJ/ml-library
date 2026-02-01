@@ -4,6 +4,12 @@ A personal machine learning library featuring implementations of core models fro
 
 An example usage of the features of the library can be seen in example_mnist_cnn.ipynb file.
 
+## Installation
+Install the necessary dependencies using the requirements file:
+```bash
+pip install -r requirements.txt
+```
+
 ## Table of Contents
 
 - [Modules](#modules)
