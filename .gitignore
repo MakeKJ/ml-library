@@ -1,7 +1,7 @@
 # Ignore folders
 class_testing/
 saved_models/
-
+venv/
 
 # Ignore files
 *.lma
@@ -14,3 +14,4 @@ saved_models/
 !example_mnist_cnn_old.ipynb
 !example_mnist_cnn.ipynb
 !example_mnist_mlp.ipynb
+!requirements.txt
